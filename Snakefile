@@ -55,14 +55,6 @@ rule get_data:
     log:
         "log/getdata.log"
     run:
-        # Inflate the zip files and copy everything into the same directory
+        # Inflate the zip files 
         shell("unzip -o {input.ama} -d {output.org} >& {log}")
-        #for target_item in output.ama:
-        #    # Copy files to a new location
-        #    org_item = target_item.replace(AMA, "org")
-        #    shell("cp {0} {1}".format(org_item, target_item))
-        #    # Delete the inflated zip location
         shell("unzip -o {input.vma} -d {output.org} >& {log}")
-        #for target_item in output.vma:
-        #    org_item = target_item.replace(VMA, "org")
-        #    shell("cp {0} {1}".format(org_item, target_item))
