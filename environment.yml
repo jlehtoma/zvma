@@ -1,0 +1,10 @@
+name: zvma
+channels:
+    - defaults
+    - conda-forge
+dependencies:
+    - python=3.5*
+    - gdal
+    - numpy
+    - rasterio
+
