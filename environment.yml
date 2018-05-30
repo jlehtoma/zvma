@@ -1,10 +1,11 @@
 name: zvma
 channels:
     - defaults
+    - bioconda
     - conda-forge
 dependencies:
     - python=3.5*
     - gdal
     - numpy
     - rasterio
-
+    - snakemake
